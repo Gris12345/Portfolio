@@ -140,7 +140,7 @@ a.active {
         top: -80px;
     }
     ul.menu {
-        top: 55px;
+        top: 65px;
         margin: 0;
         width: 100%;
         transition: top 1s ease;
@@ -175,9 +175,18 @@ a.active {
     }
 }
 
-@media (max-width:  400px) {
+@media (max-width:  450px) {
     .header {
         width: 85%;
+        padding: 10px;
+}
+
+@media (max-width:  400px) {
+    ul.menu {
+        top: 55px
+    }
+    .header {
+        width: 90%;
         padding: 10px;
     }
     .site_name {
