@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Владислав Гришак</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="styles/about.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/fontawesome/all.min.css">
 </head>
 <body>
 <header>
@@ -16,8 +18,12 @@
                 <a href="" class="site_description">персональный сайт</a>
             </h1>
         </div>
+
         <div class="menu">
-            <ul class="menu">
+            <div class="mobile-menu">
+                <a href="#" class="menu-toggle"><i class="fas fa-bars"></i></a>
+            </div>
+            <ul class="menu hidden">
                 <li>
                     <a href="index.html" class="active">Обо мне</a>
                 </li>
@@ -33,7 +39,8 @@
             </ul>
         </div>
     </div>
+    <script src="jquery.js"></script>
+    <script src="scripts.js"></script>
 </header>
-
 </body>
 </html>
