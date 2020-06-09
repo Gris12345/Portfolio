@@ -177,13 +177,13 @@ a.active {
 
 @media (max-width:  450px) {
     .header {
-        width: 85%;
+        width: 90%;
         padding: 10px;
+    }
 }
-
-@media (max-width:  400px) {
+@media (max-width:  350px) {
     ul.menu {
-        top: 55px
+        top: 55px;
     }
     .header {
         width: 90%;
