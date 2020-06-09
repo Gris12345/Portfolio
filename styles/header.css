@@ -155,7 +155,7 @@ a.active {
     }
     .menu li {
         margin: 0;
-        padding-top: 10px;
+        padding-top: 12px;
     }
     .menu li:first-child {
         padding: 0;
@@ -175,7 +175,11 @@ a.active {
     }
 }
 
-@media (max-width:  360px) {
+@media (max-width:  400px) {
+    .header {
+        width: 85%;
+        padding: 10px;
+    }
     .site_name {
         font-size: 18px;
     }
