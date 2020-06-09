@@ -71,6 +71,10 @@ ul.menu {
     transition: color,border-bottom-color .5s ease-in-out;
 }
 
+.menu a:active{
+    border-bottom: 3px solid white;
+}
+
 a.active {
     color: white;
     border-bottom: 3px solid white;
@@ -137,15 +141,15 @@ a.active {
         font-size: 30px;
     }
     ul.menu.hidden {
-        top: -80px;
+        top: -100px;
     }
     ul.menu {
-        top: 65px;
+        top: 62px;
         margin: 0;
         width: 100%;
         transition: top 1s ease;
         background-color: #303547;
-        padding:15px 0 15px 20px;
+        padding:20px 0 20px 20px;
         position: fixed;
         display: flex;
         flex-direction: column;
