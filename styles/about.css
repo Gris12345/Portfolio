@@ -1,7 +1,7 @@
 .container {
     width: 100%;
 }
-.n {
+.about {
     background-color: #F0F0F0;
 }
 .information {
@@ -35,16 +35,20 @@
 .text p {
     font-size: 18px;
     margin: 10px auto;
+    line-height: 1.5;
 }
 
-.image {
+.image.my-photo {
     background-image: url("../images/AsGV0T5k3Ss.jpg");
     width: 180px;
     height: 180px;
+    border-radius: 100px;
+}
+
+.image {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    border-radius: 100px;
     box-shadow: 0 0 6px #666;
 }
 
@@ -59,25 +63,101 @@
     margin: 0 auto;
 }
 
+.content-about {
+    padding: 40px 0 70px 0;
+    display: flex;
+    max-width: 1920px;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.image.university {
+    background-image: url("../images/university.jpg");
+    width: 500px;
+    height: 280px;
+}
+.underline.horizontal {
+    width: 1px;
+    height: 150px;
+    margin: 0 60px;
+}
+
+.text-about{
+    width: 500px;
+}
+
+.text-about p{
+    font-size: 18px;
+    line-height: 1.6;
+}
 
 
 
 
 
-
-
-
-
-
-
-
-
-
+@media (max-width:  1200px) {
+    .text {
+        width: 50%;
+        padding-right: 80px;
+    }
+    .content-about {
+        padding-top: 30px;
+    }
+    .image.university {
+        width: 450px;
+        height: 265px;
+    }
+    .underline.horizontal {
+        height: 160px;
+        margin: 0 40px;
+    }
+    .text-about{
+        width: 450px;
+    }
+}
 
 @media (max-width:  1000px) {
     .text {
-        width: 50%;
         padding-right: 50px;
+    }
+    .image.university {
+        width: 400px;
+        height: 235px;
+    }
+    .underline.horizontal {
+        height: 170px;
+        margin: 0 30px;
+    }
+    .text-about{
+        width: 400px;
+    }
+    .text-about p{
+        line-height: 1.5;
+    }
+}
+
+@media (max-width:  880px) {
+    .content-about {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .underline.horizontal {
+        height: 1px;
+        width: 250px;
+        margin: 40px 0;
+    }
+    .image.university {
+        width: 450px;
+        height: 265px;
+    }
+    .text-about{
+        width: 450px;
+    }
+    .text-about p{
+        text-align: center;
+        margin: 0;
     }
 }
 
@@ -103,12 +183,22 @@
     }
 }
 
-@media (max-width:  460px) {
+@media (max-width:  470px) {
     .text h1{
         font-size: 28px;
     }
     .information{
         padding: 80px 0;
+    }
+    .image.university {
+        width: 350px;
+        height: 195px;
+    }
+    .text-about{
+        width: 350px;
+    }
+    .underline.horizontal {
+        margin: 20px 0;
     }
 }
 
@@ -138,6 +228,16 @@
     .image {
         width: 140px;
         height: 140px;
+    }
+    .image.university {
+        width: 300px;
+        height: 175px;
+    }
+    .text-about{
+        width: 300px;
+    }
+    .underline.horizontal {
+        margin: 15px 0;
     }
 }
 
