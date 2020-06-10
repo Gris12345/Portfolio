@@ -2,14 +2,11 @@ body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
 }
-
-
 header {
     background-color: #253366;
     width: 100%;
     box-shadow: 0 6px 4px -4px rgba(0, 0, 0, .2);
 }
-
 .header {
     margin: 0 auto;
     display: flex;
@@ -17,96 +14,98 @@ header {
     justify-content: space-between;
     padding: 10px 20px;
 }
-
 .header_name {
     display: flex;
     align-items: center;
 }
-
 .header_name h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 0;
 }
-
 header h1 a {
     margin: 0;
     font-style: italic;
     text-decoration: none;
     color: white;
 }
-
 .site_name {
     font-size: 24px;
 
 }
-
 .site_description{
     font-weight: normal;
     font-size: 14px;
 }
-
-ul.menu {
+.menu-horizontal {
     display: flex;
     list-style: none;
     padding: 0;
 }
-
-.menu li {
+.menu-horizontal li {
     font-size: 15px;
 }
-
-.menu a {
+.menu-horizontal a {
     padding: 0 16px 23px 16px;
     text-decoration: none;
     color: #B3B7C0;
     border-bottom: 3px solid transparent;
 }
-
-.menu a:hover {
+.menu-horizontal a:hover {
     text-decoration: none;
     color: white;
     border-bottom: 3px solid white;
     transition: color,border-bottom-color .5s ease-in-out;
 }
-
-.menu a:active{
-    border-bottom: 3px solid white;
-}
-
-a.active {
+.menu-horizontal a.active {
     color: white;
     border-bottom: 3px solid white;
 }
-
 .mobile-menu{
     display: none;
 }
+.mobile-menu a {
+    color: white;
+}
+.menu-vertical {
+    list-style: none;
+    display: none;
+}
+.menu-vertical a {
+    text-decoration: none;
+    color: #B3B7C0;
+}
+.menu-vertical a:hover {
+    color: white;
+}
+.menu-vertical a.active {
+    color: white;
+}
+
+
 
 @media (max-width:  1280px) {
     .header {
         width: 80%;
     }
 }
-
 @media (max-width:  1080px) {
     .header {
         width: 82%;
     }
 }
-
 @media (max-width:  960px) {
     .header {
         width: 85%;
     }
 }
-
 @media (max-width:  860px) {
     .header {
         width: 95%;
     }
 }
+
 
 @media (max-width:  760px) {
     .header {
@@ -119,31 +118,38 @@ a.active {
     .header h1 {
         margin: auto;
     }
-    ul.menu {
+    .menu-horizontal {
         justify-content: center;
     }
 }
 
 @media (max-width: 500px) {
-    .header{
+    header {
+        position: relative;
+        z-index: 2;
+    }
+    .header {
         flex-direction: row;
         justify-content: space-between;
         width: 82%;
     }
-    div.menu {
+    .menu {
         display: flex;
         align-items: center;
         padding-right: 10px;
     }
-    div.mobile-menu {
+    .menu-horizontal {
+        display: none;
+    }
+    .mobile-menu {
         color: white;
         display: block;
         font-size: 30px;
     }
-    ul.menu.hidden {
-        top: -125px;
+    .menu-vertical.hidden {
+        top: -110px;
     }
-    ul.menu {
+    .menu-vertical {
         top: 55px;
         margin: 0;
         width: 100%;
@@ -153,29 +159,17 @@ a.active {
         position: fixed;
         display: flex;
         flex-direction: column;
-        left: 0;
-        z-index: -1;
+        z-index: 1;
         box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
     }
-    .menu li {
+    .menu-vertical li {
         margin: 0 auto;
         padding-top: 12px;
     }
-    .menu li:first-child {
+    .menu-vertical li:first-child {
         padding: 0;
-    }
-    .menu a {
-        padding: 0;
-        border-bottom: 3px solid transparent;
-    }
-    .menu a:hover {
-        text-decoration: none;
-        color: white;
-        border-bottom: none;
-        transition: none;
     }
 }
-
 @media (max-width:  450px) {
     .header {
         width: 90%;
@@ -183,7 +177,7 @@ a.active {
     }
 }
 @media (max-width:  350px) {
-    ul.menu {
+    .menu-vertical {
         top: 45px;
     }
     .header {
@@ -197,7 +191,3 @@ a.active {
         font-size: 8px;
     }
 }
-
-
-
-
