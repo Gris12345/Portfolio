@@ -1,7 +1,17 @@
+html, body {
+    height: 100%;
+}
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
+    display: flex;
+    flex-direction: column;
 }
+
+.content {
+    flex: 1 0 auto;
+}
+
 header {
     background-color: #253366;
     width: 100%;
@@ -84,18 +94,44 @@ header h1 a {
     color: white;
 }
 
+footer {
+    width: 100%;
+    background-color: #253366;
+    flex-shrink: 0;
+}
 
+.footer {
+    padding: 40px 0;
+    margin: auto;
+    width: 80%;
+    max-width: 1400px;
+    display: flex;
+    justify-content: space-between;
+}
+.footer p,.icons, .footer a{
+    margin: 0;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+.icons {
+    display: flex;
+    justify-content: space-between;
+    width: 60px;
+}
 
 @media (max-width:  1280px) {
     .header {
         width: 80%;
     }
 }
+
 @media (max-width:  1080px) {
     .header {
         width: 82%;
     }
 }
+
 @media (max-width:  960px) {
     .header {
         width: 85%;
@@ -106,7 +142,6 @@ header h1 a {
         width: 95%;
     }
 }
-
 
 @media (max-width:  760px) {
     .header {
@@ -121,6 +156,12 @@ header h1 a {
     }
     .menu-horizontal {
         justify-content: center;
+    }
+    .footer {
+        width: 94%;
+    }
+    .footer p,.icons, .footer a{
+        font-size: 18px;
     }
 }
 
@@ -170,13 +211,23 @@ header h1 a {
     .menu-vertical li:first-child {
         padding: 0;
     }
+    .footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer p,.icons {
+        margin-bottom: 25px;
+    }
 }
+
 @media (max-width:  450px) {
     .header {
         width: 90%;
         padding: 10px;
     }
 }
+
 @media (max-width:  350px) {
     .menu-vertical {
         top: 45px;

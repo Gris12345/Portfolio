@@ -52,6 +52,10 @@
     box-shadow: 0 0 6px #666;
 }
 
+.container.about {
+    flex: 1 0 auto;
+}
+
 .container > h1 {
     padding: 30px 0 20px;
     font-size: 32px;
@@ -91,10 +95,6 @@
     font-size: 18px;
     line-height: 1.6;
 }
-
-
-
-
 
 @media (max-width:  1200px) {
     .text {
@@ -172,7 +172,7 @@
     .information {
         flex-direction: column;
     }
-    .image{
+    .image.my-photo {
         margin-bottom: 20px;
     }
     .text {
